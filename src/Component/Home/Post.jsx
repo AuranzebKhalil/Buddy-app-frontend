@@ -30,10 +30,7 @@ import PopupComment from "./CommentPopup";
 
 const Post = (props) => {
 
-
-
 const item = props.postitem
-
   return (
     <Box sx={{ marginTop: "-20px" }}>
     <Loader/>

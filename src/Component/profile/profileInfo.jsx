@@ -34,8 +34,6 @@ const ProfileInfo = () => {
 
 
   const onClick = () => {
-    console.log(data);
- 
       const item = data?.data.filter((item) => item.userid === currentUser?.id);
   
       let loopData;

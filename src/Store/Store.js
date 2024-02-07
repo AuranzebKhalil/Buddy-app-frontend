@@ -10,6 +10,7 @@ import messanger from '../Store/lib/features/messanger';
 import Audio from "../Store/lib/features/audio";
 import { messangers } from '../Store/Services/messangers';
 import  Loader  from './lib/features/loaderSlice';
+import { Story } from './Services/Story';
 
 // Combine the reducers
 const rootReducer = combineReducers({
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   userlogout: userlogout.reducer,
   friendsResquest: friendsResquest.reducer,
   exceptFriend: exceptFriend.reducer,
+  Story:Story.reducer
 });
 
 
@@ -36,7 +38,8 @@ export const store = configureStore({
       userlogout.middleware,
       friendsResquest.middleware,
       exceptFriend.middleware,
-      messangers.middleware
+      messangers.middleware,
+      Story.middleware
     ),
 });
 
